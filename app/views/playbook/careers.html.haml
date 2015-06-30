@@ -1,0 +1,13 @@
+= render 'navbar/navbar'
+
+%section
+  %h2 We Want You!
+  %h3 We're currently looking for more awesome people to work with us!
+  %ul
+    - available_positions.each do |p|
+      %li= link_to p.name
+
+= render 'shared/practical'
+= render 'shared/working'
+= render 'shared/training'
+= render 'shared/conferences'

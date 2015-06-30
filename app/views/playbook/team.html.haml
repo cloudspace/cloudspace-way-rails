@@ -1,0 +1,16 @@
+= render 'navbar/navbar'
+
+%section
+  %h2 The Cloudspace Team
+  %ul
+    - people.each do |p|
+      %li
+        %ul
+          %li= p.name
+          %li= p.email
+          %li= p.github
+          %li= p.position.name
+          - if p.twitter.present?
+            %li= "@#{p.twitter}"
+          - if p.linkedin.present?
+            %li= p.linkedin
